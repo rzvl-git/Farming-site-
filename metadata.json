@@ -1,0 +1,6 @@
+{
+  "name": "Farming Management",
+  "description": "An advanced, high-tech task-based farm management platform showcasing an organic Web Dashboard for managers and a React Native mobile experience for field workers.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

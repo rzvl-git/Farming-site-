@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Fraunces', serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --color-cream-light: #FAF7F2;
+  --color-cream-main: #F6F1EA;
+  --color-cream-rich: #EDE8DE;
+  --color-cream-dark: #E6DFD3;
+  --color-charcoal-olive: #2C3025;
+  --color-olive-deep: #4A5833;
+  --color-olive-dark: #374225;
+  --color-olive-medium: #7D8C61;
+  --color-olive-sage: #8F9E75;
+  --color-olive-moss: #A1AF84;
+  --color-terracotta: #C87A53;
+  --color-amber-ochre: #D49B45;
+  --color-border-warm: #D2C9B9;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-cream-light);
+    color: var(--color-charcoal-olive);
+    font-family: var(--font-sans);
+  }
+}
+
+@layer utilities {
+  .serif-italic {
+    font-family: var(--font-display);
+    font-style: italic;
+  }
+  .border-editorial {
+    border-color: var(--color-border-warm);
+    border-width: 1px;
+  }
+}
+
+/* Animations for floating assets */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes pulse-ring {
+  0% { transform: scale(0.9); opacity: 0.4; }
+  50% { transform: scale(1.1); opacity: 0.7; }
+  100% { transform: scale(0.9); opacity: 0.4; }
+}
+
+.animate-float-slow {
+  animation: float 8s ease-in-out infinite;
+}
+
+.animate-float-medium {
+  animation: float 5s ease-in-out infinite;
+}
+
+.animate-pulse-ring {
+  animation: pulse-ring 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
